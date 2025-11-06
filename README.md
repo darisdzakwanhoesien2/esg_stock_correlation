@@ -34,3 +34,4 @@ python -m modules.sentiment_aggregator
 streamlit run app.py
 
 # esg_stock_correlation
+# esg_stock_correlation
