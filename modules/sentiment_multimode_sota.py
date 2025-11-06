@@ -34,7 +34,6 @@ DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 MODEL_MAP = {
     "finbert": "yiyanghkust/finbert-tone",
     "roberta": "cardiffnlp/twitter-roberta-base-sentiment-latest",
-    "deberta": "microsoft/deberta-v3-base",
 }
 
 
@@ -103,10 +102,10 @@ def score_transformer(pipe, text):
 def compute_sentiment(news_df: pd.DataFrame, modes=None):
     """
     Compute sentiment for each text type (headline, snippet, full_text)
-    across multiple modes (VADER, FinBERT, RoBERTa, DeBERTa).
+    across multiple modes (VADER, FinBERT, RoBERTa).
     """
     if modes is None:
-        modes = ["vader", "finbert", "roberta", "deberta"]
+        modes = ["vader", "finbert", "roberta"]
 
     df = news_df.copy()
     df["Date"] = pd.to_datetime(df["Date"]).dt.normalize()
