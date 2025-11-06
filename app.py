@@ -37,8 +37,8 @@ refresh_dashboard = st.sidebar.button("🔄 Refresh Dashboard Data")
 
 modes_selected = st.sidebar.multiselect(
     "Select Sentiment Models",
-    options=["vader", "finbert", "roberta", "deberta"],
-    default=["vader", "finbert", "roberta", "deberta"],
+    options=["vader", "finbert", "roberta"],
+    default=["vader", "finbert", "roberta"],
 )
 
 # -----------------------------
