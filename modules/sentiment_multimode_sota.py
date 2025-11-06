@@ -68,10 +68,11 @@ def score_vader(text):
 # ==========================================================
 def load_transformer(model_name):
     """
-    Load Hugging Face sentiment pipeline.
+    Lazy-load a transformer model for sentiment analysis.
     """
-    print(f"🔍 Loading transformer: {model_name}")
-    return pipeline("sentiment-analysis", model=model_name, device=-1, tokenizer_kwargs={'use_fast': False})
+    # device=-1 for CPU, device=0 for GPU
+    # use_fast=False to avoid issues with some tokenizers
+    return pipeline("sentiment-analysis", model=model_name, device=-1)
 
 
 def score_transformer(pipe, text):
