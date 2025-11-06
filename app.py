@@ -51,7 +51,7 @@ if run_sentiment:
         st.stop()
 
     import pandas as pd
-    df_news = pd.read_csv(RAW_NEWS)
+    df_news = pd.read_csv(RAW_NEWS, sep=',', quotechar='"', on_bad_lines='warn')
     progress = st.progress(0)
     st.info(f"Loaded {len(df_news)} articles. Beginning multi-model sentiment scoring...")
 
