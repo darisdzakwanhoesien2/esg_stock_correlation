@@ -5,6 +5,9 @@ import numpy as np
 import os
 import time
 from datetime import datetime
+import nltk
+
+nltk.download('vader_lexicon')
 
 # Import internal pipeline modules
 from modules.sentiment_multimode_sota import compute_sentiment, save_results, save_metadata
