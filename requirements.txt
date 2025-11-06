@@ -1,11 +1,29 @@
-streamlit
-pandas
-numpy
-yfinance
-plotly
-scikit-learn
-transformers==4.44.2
-tokenizers==0.19.1
-torch
-newsapi-python
-nltk
+# --- Core App ---
+streamlit>=1.37.0
+pandas>=2.1.0
+numpy>=1.26.0
+matplotlib>=3.8.0
+plotly>=5.18.0
+
+# --- Sentiment Analysis (Multimode + SOTA) ---
+transformers>=4.43.0
+torch>=2.2.0
+tokenizers>=0.19.0
+sentencepiece>=0.1.99
+protobuf>=4.25.0
+
+# --- NLP Basics ---
+nltk>=3.9
+textblob>=0.17.1
+
+# --- Optional but Useful ---
+scikit-learn>=1.4.0
+requests>=2.31.0
+tqdm>=4.66.0
+
+# --- Safe model handling and caching ---
+huggingface-hub>=0.23.0
+accelerate>=0.30.0
+
+# --- Visualization and Explainability (optional) ---
+shap>=0.44.0
