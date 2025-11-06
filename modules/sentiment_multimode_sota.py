@@ -71,7 +71,7 @@ def load_transformer(model_name):
     Load Hugging Face sentiment pipeline.
     """
     print(f"🔍 Loading transformer: {model_name}")
-    return pipeline("sentiment-analysis", model=model_name, device=-1)
+    return pipeline("sentiment-analysis", model=model_name, device=-1, tokenizer_kwargs={'use_fast': False})
 
 
 def score_transformer(pipe, text):
