@@ -43,7 +43,6 @@ modes_selected = st.sidebar.multiselect(
 
 # -----------------------------
 # Step 1 — Run Sentiment Analysis
-# -----------------------------
 if run_sentiment:
     st.subheader("🧠 Step 1 — Running Sentiment Analysis")
     if not os.path.exists(RAW_NEWS):

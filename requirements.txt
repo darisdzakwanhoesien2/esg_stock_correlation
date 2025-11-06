@@ -8,3 +8,4 @@ transformers==4.44.2
 tokenizers==0.19.1
 torch
 newsapi-python
+nltk
