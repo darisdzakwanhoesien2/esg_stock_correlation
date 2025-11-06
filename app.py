@@ -8,22 +8,8 @@ from datetime import datetime
 # app.py (top part)
 import nltk
 
-# Try downloading missing data silently
-try:
-    nltk.data.find('sentiment/vader_lexicon.zip')
-except LookupError:
-    nltk.download('vader_lexicon')
-
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
-
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    nltk.download('stopwords')
-
+nltk.download('vader_lexicon')
+nltk.download('punkt')
 
 # Import internal pipeline modules
 from modules.sentiment_multimode_sota import compute_sentiment, save_results, save_metadata
