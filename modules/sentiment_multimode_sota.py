@@ -72,7 +72,7 @@ def load_transformer(model_name):
     """
     # device=-1 for CPU, device=0 for GPU
     # use_fast=False to avoid issues with some tokenizers
-    return pipeline("sentiment-analysis", model=model_name, device=-1)
+    return pipeline("sentiment-analysis", model=model_name, device=-1, use_fast=False)
 
 
 def score_transformer(pipe, text):
