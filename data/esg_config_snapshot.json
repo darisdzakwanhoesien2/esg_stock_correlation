@@ -1,0 +1,44 @@
+{
+    "Environmental": {
+        "CarbonIntensity": {
+            "mean_offset": 120,
+            "std": 30,
+            "min": 10,
+            "max": 300
+        },
+        "RenewableEnergy": {
+            "scale_divisor": 1.2,
+            "std": 15
+        }
+    },
+    "Social": {
+        "GenderDiversity": {
+            "base": 35,
+            "sensitivity": 0.5,
+            "std": 5,
+            "min": 10,
+            "max": 60
+        }
+    },
+    "Governance": {
+        "BoardIndependence": {
+            "base": 70,
+            "sensitivity": 0.333,
+            "std": 5,
+            "min": 30,
+            "max": 95
+        }
+    },
+    "Controversy": {
+        "base": 90,
+        "sensitivity": 0.333,
+        "std": 5,
+        "min": 50,
+        "max": 95
+    },
+    "ESG_Weights": {
+        "E": 0.4,
+        "S": 0.3,
+        "G": 0.3
+    }
+}
